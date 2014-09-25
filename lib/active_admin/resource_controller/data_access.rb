@@ -171,7 +171,7 @@ module ActiveAdmin
       # @returns [void]
       def update_resource(object, attributes)
         if object.respond_to?(:assign_attributes)
-          object.assign_attributes(*attributes)
+          object.assign_attributes(attributes[0])
         else
           object.attributes = attributes[0]
         end
